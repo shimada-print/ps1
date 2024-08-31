@@ -5,9 +5,9 @@
 Node.jsは需要が多く、Pythonは唯一AIとの連携が強く、  
 Go言語はスマホのアプリも作れ、PoewrShallは手軽です。
 
-## ps1とはPowerShallの拡張子です
 Windows上で自動処理などが出来るVBSは防犯上などから、  
-廃止されるので「PowerShall.ps1」を学びましょう。
+廃止されるので、VBSのソースコードをChatGPTで簡単に  
+置き換えも出来ます。
 
 ## PowerShallは従来のシェルと違い高防犯です
 初めてPowerShallでスクリプトを作成し、実行しようとすると  
