@@ -43,6 +43,44 @@ VBSは廃止ですが、VBAはExcelとAIで連携で残るでしょう。
 上図のメニューの上から２番目の「PowerShell で実行」  
 を選ぶとPowerShellで作成書類が動作（実行）します。  
 
-ダブルクリックをするとnoteで編集できて、メニューの  
+ダブルクリックをするとnotepadで編集できて、メニューの  
 ３番目の「編集」を選ぶとPowerShellの専用アプリで編集  
 できます。
+
+### Go言語でPC内のアプリを操作するコード
+```go
+package main
+
+import (
+    "fmt"
+    "os/exec"
+)
+
+func main() {
+    // メモ帳 (Notepad) を起動する
+    cmd := exec.Command("notepad.exe")
+    err := cmd.Start() // コマンドを開始
+    if err != nil {
+        fmt.Println("エラー:", err)
+        return
+    }
+    fmt.Println("メモ帳を起動しました")
+}
+package main
+
+import (
+    "fmt"
+    "os/exec"
+)
+
+func main() {
+    // メモ帳 (Notepad) を起動する
+    cmd := exec.Command("notepad.exe")
+    err := cmd.Start() // コマンドを開始
+    if err != nil {
+        fmt.Println("エラー:", err)
+        return
+    }
+    fmt.Println("メモ帳を起動しました")
+}
+
