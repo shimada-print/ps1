@@ -1,6 +1,6 @@
 # Windows PowerShallで楽な自動化
 従来の自動化なスクリプトはBATやVBSでしたが、  
-今はNode.jsやPythonやGp言語やPoewrShallです。  
+今はNode.jsやPythonやGo言語やPoewrShallです。  
 Node.jsは需要が多く、Pythonは唯一AIとの連携が強く、  
 Go言語はスマホのアプリも作れ、PoewrShallは手軽です。
 
