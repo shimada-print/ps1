@@ -1,4 +1,4 @@
-# PowerShallで楽な自動化
+# Windows PowerShallで楽な自動化
 ## ps1とはパワーシェルの拡張子です
 Windows上で自動処理などが出来るVBSは防犯上などから、  
 廃止されるので「パワーシェル.ps1」を学びましょう。
