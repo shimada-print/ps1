@@ -5,7 +5,7 @@
 
 従来の自動化なスクリプトはBATやVBSでしたが、  
 今はNode.jsやPythonやGo言語やPowerShellです。  
-しかしPowerShell以外は専門的で習得が難しいです。
+しかしPowerShell以外は専門的で習得がやや困難です。
 
 Node.jsは需要が多く、Pythonは唯一AIとの連携が強く、  
 Go言語はスマホのアプリも作れますが、PowerShellのみ  
