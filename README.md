@@ -8,8 +8,8 @@
 しかしPowerShell以外は専門的で習得が難しいです。
 
 Node.jsは需要が多く、Pythonは唯一AIとの連携が強く、  
-Go言語はスマホのアプリも作れ、PowerShellのみOSに  
-初めから付属されているので手軽です。
+Go言語はスマホのアプリも作れますが、PowerShellのみ  
+WindowsにOSインストール直後から付属なので手軽です。
 
 Windows上で自動処理などが出来るVBSは防犯上などから、  
 廃止されるので、VBSのソースコードをChatGPTで簡単に  
