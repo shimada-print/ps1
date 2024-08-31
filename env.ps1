@@ -1,14 +1,14 @@
-# ���ϐ���\������X�N���v�g
+# 環境変数を表示するスクリプト
 
-# �V�X�e�����ϐ��̕\��
-Write-Output "�V�X�e�����ϐ�:"
+# システム環境変数の表示
+Write-Output "システム環境変数:"
 Get-ChildItem Env:
 
-# ����̊��ϐ���\�������
-# Write-Output "PATH ���ϐ�:"
+# 特定の環境変数を表示する例
+# Write-Output "PATH 環境変数:"
 # Write-Output $env:PATH
 
-# ��L��ChatGPT�ɂ����Ă������
-# ���L�����Ȃ��ƒ����ɏ����Č���Ȃ�
+# 上記はChatGPTに書いてもらった
+# 下記を入れないと直ぐに消えて見れない
 
 Read-Host -Prompt "Press Enter to exit"
