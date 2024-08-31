@@ -1,17 +1,17 @@
-# Windows PowerShallで楽な自動化
+# Windows PowerShellで楽な自動化
 従来の自動化なスクリプトはBATやVBSでしたが、  
-今はNode.jsやPythonやGo言語やPowerShallです。  
+今はNode.jsやPythonやGo言語やPowerShellです。  
 
 Node.jsは需要が多く、Pythonは唯一AIとの連携が強く、  
-Go言語はスマホのアプリも作れ、PoewrShallは手軽です。
+Go言語はスマホのアプリも作れ、PoewrShellは手軽です。
 
 Windows上で自動処理などが出来るVBSは防犯上などから、  
 廃止されるので、VBSのソースコードをChatGPTで簡単に  
-置き換えも出来ますので、PowerShallから学ぶと効率が  
+置き換えも出来ますので、PowerShellから学ぶと効率が  
 良いです。
 
-## PowerShallは従来のシェルと違い高防犯です
-初めてPowerShallでスクリプトを作成し、実行しようとすると  
+## PowerShellは従来のシェルと違い高防犯です
+初めてPowerShellでスクリプトを作成し、実行しようとすると  
 「デジタル署名がされていないので実行できません」と英文で  
 表示されますので、署名するか署名を無効にしても実行できる  
 ようにしましょう。
