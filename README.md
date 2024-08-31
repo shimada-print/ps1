@@ -4,7 +4,7 @@
 くれるという、無駄の削減ということになります。  
 
 従来の自動化なスクリプトはBATやVBSでしたが、  
-今はNode.jsやPythonやGo言語やPowerShellです。
+今はNode.jsやPythonやGo言語やPowerShellです。　　
 しかしPowerShell以外は専門的で習得が難しいです。
 
 Node.jsは需要が多く、Pythonは唯一AIとの連携が強く、  
