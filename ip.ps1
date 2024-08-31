@@ -1,6 +1,6 @@
-# IP î•ñ‚ğæ“¾‚·‚éŠÖ”
+# IP æƒ…å ±ã‚’å–å¾—ã™ã‚‹é–¢æ•°
 function Get-Location {
-    $apiUrl = "https://ipinfo.io/json" # IPinfo API ‚Ì URL
+    $apiUrl = "https://ipinfo.io/json" # IPinfo API ã® URL
     try {
         $response = Invoke-RestMethod -Uri $apiUrl
         $location = @{
@@ -12,11 +12,11 @@ function Get-Location {
         }
         return $location
     } catch {
-        Write-Error "ˆÊ’uî•ñ‚ğæ“¾‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+        Write-Error "ä½ç½®æƒ…å ±ã‚’å–å¾—ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
     }
 }
 
-# ˆÊ’uî•ñ‚ğ•\¦‚·‚é
+# ä½ç½®æƒ…å ±ã‚’è¡¨ç¤ºã™ã‚‹
 $location = Get-Location
 if ($location) {
     Write-Output "IP: $($location.IP)"
@@ -26,7 +26,7 @@ if ($location) {
     Write-Output "Location (Latitude, Longitude): $($location.Location)"
 }
 
-# ã‹L‚ÍChatGPT‚É‚©‚¢‚Ä‚à‚ç‚Á‚½
-# ‰º‹L‚ğ“ü‚ê‚È‚¢‚Æ’¼‚®‚ÉÁ‚¦‚ÄŒ©‚ê‚È‚¢
+# ä¸Šè¨˜ã¯ChatGPTã«æ›¸ã„ã¦ã‚‚ã‚‰ã£ãŸ
+# ä¸‹è¨˜ã‚’å…¥ã‚Œãªã„ã¨ç›´ãã«æ¶ˆãˆã¦è¦‹ã‚Œãªã„
 
 Read-Host -Prompt "Press Enter to exit"
