@@ -1,4 +1,9 @@
 # Windows PowerShallで楽な自動化
+従来の自動化なスクリプトはBATやVBSでしたが、
+今はNode.jsやPythonやGp言語やPoewrShallです。
+Node.jsは需要が多く、Pythonは唯一AIとの連携が強く、  
+Go言語はスマホのアプリも作れ、PoewrShallは手軽です。
+
 ## ps1とはパワーシェルの拡張子です
 Windows上で自動処理などが出来るVBSは防犯上などから、  
 廃止されるので「パワーシェル.ps1」を学びましょう。
