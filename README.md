@@ -1,16 +1,23 @@
 # Windows PowerShellで楽な自動化
+自動化とは例えば1時間おきに自動的に書類を保存  
+したり、ボタンを１つ押すだけ複数の作業をして  
+くれるという、無駄の削減ということになります。  
+
 従来の自動化なスクリプトはBATやVBSでしたが、  
-今はNode.jsやPythonやGo言語やPowerShellです。  
+今はNode.jsやPythonやGo言語やPowerShellです。
+しかしPowerShell以外は専門的で習得が難しいです。
 
 Node.jsは需要が多く、Pythonは唯一AIとの連携が強く、  
-Go言語はスマホのアプリも作れ、PoewrShellは手軽です。
+Go言語はスマホのアプリも作れ、PowerShellのみOSに  
+初めから付属されているので手軽です。
 
 Windows上で自動処理などが出来るVBSは防犯上などから、  
 廃止されるので、VBSのソースコードをChatGPTで簡単に  
 置き換えも出来ますので、PowerShellから学ぶと効率が  
 良いです。
 
-なおVBSは廃止ですが、VBAはExcelとAIで連携で残るでしょう。
+VBSは廃止ですが、VBAはExcelとAIで連携で残るでしょう。  
+事務系な一般的な業務はPowerShellとVBAということです。
 
 ## PowerShellは従来のシェルと違い高防犯です
 初めてPowerShellでスクリプトを作成し、実行しようとすると  
