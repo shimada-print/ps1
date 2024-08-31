@@ -31,9 +31,9 @@ Windows上で自動処理などが出来るVBSは防犯上などから、
 
 下図のように右クリックを1回するとメニューが出てきます。  
 ![PowerShallで実行する](./image/PowerShellExe.jpg)  
-上図のメニューの上から２番目の「PowerShall で実行」  
-を選ぶとPowerShallで作成書類が動作（実行）します。  
+上図のメニューの上から２番目の「PowerShell で実行」  
+を選ぶとPowerShellで作成書類が動作（実行）します。  
 
 ダブルクリックをするとnoteで編集できて、メニューの  
-３番目の「編集」を選ぶとPowerShallの専用アプリで編集  
+３番目の「編集」を選ぶとPowerShellの専用アプリで編集  
 できます。
