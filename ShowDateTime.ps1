@@ -1,13 +1,13 @@
 Add-Type -AssemblyName System.Windows.Forms
 
-# ƒEƒBƒ“ƒhƒE‚Ìİ’è
+# ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®è¨­å®š
 $form = New-Object System.Windows.Forms.Form
-$form.Text = "Œ»İ‚Ì“ú"
+$form.Text = "ç¾åœ¨ã®æ—¥æ™‚"
 $form.Width = 300
 $form.Height = 100
 $form.StartPosition = "CenterScreen"
 
-# ƒ‰ƒxƒ‹‚Ìİ’è
+# ãƒ©ãƒ™ãƒ«ã®è¨­å®š
 $label = New-Object System.Windows.Forms.Label
 $label.Width = 280
 $label.Height = 40
@@ -15,7 +15,7 @@ $label.Location = New-Object System.Drawing.Point(10, 10)
 $label.Font = New-Object System.Drawing.Font("Arial", 14, [System.Drawing.FontStyle]::Bold)
 $form.Controls.Add($label)
 
-# ƒ^ƒCƒ}[‚Ìİ’è (1•b‚²‚Æ‚ÉŒ»İ‚Ì“ú‚ğXV)
+# ã‚¿ã‚¤ãƒãƒ¼ã®è¨­å®š (1ç§’ã”ã¨ã«ç¾åœ¨ã®æ—¥æ™‚ã‚’æ›´æ–°)
 $timer = New-Object System.Windows.Forms.Timer
 $timer.Interval = 1000
 $timer.Add_Tick({
@@ -23,11 +23,11 @@ $timer.Add_Tick({
 })
 $timer.Start()
 
-# ƒtƒH[ƒ€‚Ì•\¦
+# ãƒ•ã‚©ãƒ¼ãƒ ã®è¡¨ç¤º
 $form.Add_Shown({ $form.Activate() })
 [void]$form.ShowDialog()
 
-# ã‹L‚ÍChatGPT‘‚¢‚Ä‚à‚ç‚Á‚½
-# ‰º‹L‚ğ“ü‚ê‚È‚¢‚Æ’¼‚®‚ÉÁ‚¦‚ÄŒ©‚ê‚È‚¢
+# ä¸Šè¨˜ã¯ChatGPTã«æ›¸ã„ã¦ã‚‚ã‚‰ã£ãŸ
+# ä¸‹è¨˜ã‚’å…¥ã‚Œãªã„ã¨ç›´ãã«æ¶ˆãˆã¦è¦‹ã‚Œãªã„
 
 Read-Host -Prompt "Press Enter to exit"
