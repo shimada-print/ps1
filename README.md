@@ -7,7 +7,7 @@ Go言語はスマホのアプリも作れ、PoewrShallは手軽です。
 
 Windows上で自動処理などが出来るVBSは防犯上などから、  
 廃止されるので、VBSのソースコードをChatGPTで簡単に  
-置き換えも出来ますので、PoewrShallから学ぶと効率が  
+置き換えも出来ますので、PowerShallから学ぶと効率が  
 良いです。
 
 ## PowerShallは従来のシェルと違い高防犯です
