@@ -9,7 +9,7 @@
 
 Node.jsは需要が多く、Pythonは唯一AIとの連携が強く、  
 Go言語はスマホのアプリも作れますが、PowerShellのみ  
-WindowsにOSインストール直後から付属なので手軽です。
+WindowsOSをインストール直後から付属なので手軽です。
 
 Windows上で自動処理などが出来るVBSは防犯上などから、  
 廃止されるので、VBSのソースコードをChatGPTで簡単に  
