@@ -1,8 +1,9 @@
-# Windows PowerShellで楽な自動化
+# PowerShellで楽な自動化をする方法
 自動化とは例えば1時間おきに自動的に書類を保存  
 したり、ボタンを１つ押すだけ複数の作業をして  
 くれるという、無駄の削減ということになります。  
 
+## モダンを覚えないとAI普及で職を失います
 従来の自動化なスクリプトはBATやVBSでしたが、  
 今はNode.jsやPythonやGo言語やPowerShellです。  
 しかしPowerShell以外は専門的で習得がやや困難です。
@@ -29,7 +30,10 @@ VBSは廃止ですが、VBAはExcelとAIで連携で残るでしょう。
 かかるので、作成者アカウントなら無署名でも実行可に  
 すると便利です。
 
-### Set-ExecutionPolicy RemoteSigned
+### 初心者が最初につまずく点はコレです
+```
+Set-ExecutionPolicy RemoteSigned
+```
 上記ののコマンドをPowerShallなどで入力すると、ローカルで  
 作成した無署名の書類は実行できますが、インターネットから  
 ダウンロードした身元不明な書類は防犯上、実行できません。
@@ -91,4 +95,9 @@ func main() {
     }
     fmt.Println("メモ帳を起動しました")
 }
+```
+
+##参照
+[推奨なPowerShallインストール方法](https://learn.microsoft.com/ja-jp/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#install-powershell-using-winget-recommended)  
+[PowerShall開発元のリポジトリ](https://github.com/PowerShell/PowerShell) 
 
