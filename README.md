@@ -100,6 +100,5 @@ func main() {
 ```
 
 ## 参照  
--[推奨なPowerShallインストール方法](https://learn.microsoft.com/ja-jp/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#install-powershell-using-winget-recommended)  
--[PowerShall開発元のリポジトリ](https://github.com/PowerShell/PowerShell) 
-
+- [推奨なPowerShallインストール方法](https://learn.microsoft.com/ja-jp/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#install-powershell-using-winget-recommended)  
+- [PowerShall開発元のリポジトリ](https://github.com/PowerShell/PowerShell) 
