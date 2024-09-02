@@ -19,5 +19,4 @@ if ($bmi -lt 18.5) {
     Write-Host "高度肥満です。"
 }
 
-# 押して終了機能を入れないと、見れないほど早く終了してしまう
 Read-Host -Prompt "Press Enter to exit"
