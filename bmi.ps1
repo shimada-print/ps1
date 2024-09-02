@@ -1,22 +1,23 @@
-# ƒ†[ƒU[‚É“ü—Í‚µ‚Ä‚à‚ç‚¤
-$weight = [double](Read-Host "‘Ìd(kg)‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢:")
-$height = [double](Read-Host "g’·(m)‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢:")
+# ãƒ¦ãƒ¼ã‚¶ãƒ¼ã«å…¥åŠ›ã—ã¦ã‚‚ã‚‰ã†
+$weight = [double](Read-Host "ä½“é‡(kg)ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„:")
+$height = [double](Read-Host "èº«é•·(m)ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„:")
 
-# BMI‚ğŒvZ
+# BMIã‚’è¨ˆç®—
 $bmi = $weight / ($height * $height)
 
-# Œ‹‰Ê‚ğ•\¦
-Write-Host "‚ ‚È‚½‚ÌBMI‚Í$bmi‚Å‚·B"
+# çµæœã‚’è¡¨ç¤º
+Write-Host "ã‚ãªãŸã®BMIã¯$bmiã§ã™ã€‚"
 
-# BMI”»’èi‚ ‚­‚Ü‚Å–ÚˆÀj
+# BMIåˆ¤å®šï¼ˆã‚ãã¾ã§ç›®å®‰ï¼‰
 if ($bmi -lt 18.5) {
-    Write-Host "’á‘Ìd‚Å‚·B"
+    Write-Host "ä½ä½“é‡ã§ã™ã€‚"
 } elseif ($bmi -ge 18.5 -and $bmi -lt 25) {
-    Write-Host "•’Ê‘Ìd‚Å‚·B"
+    Write-Host "æ™®é€šä½“é‡ã§ã™ã€‚"
 } elseif ($bmi -ge 25 -and $bmi -lt 30) {
-    Write-Host "”ì–(‡T“x)‚Å‚·B"
+    Write-Host "è‚¥æº€(â… åº¦)ã§ã™ã€‚"
 } else {
-    Write-Host "‚“x”ì–‚Å‚·B"
+    Write-Host "é«˜åº¦è‚¥æº€ã§ã™ã€‚"
 }
 
+# æŠ¼ã—ã¦çµ‚äº†æ©Ÿèƒ½ã‚’å…¥ã‚Œãªã„ã¨ã€è¦‹ã‚Œãªã„ã»ã©æ—©ãçµ‚äº†ã—ã¦ã—ã¾ã†
 Read-Host -Prompt "Press Enter to exit"
