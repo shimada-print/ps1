@@ -1,15 +1,14 @@
-# CPU‰·“x‚ğæ“¾‚·‚éƒXƒNƒŠƒvƒg
+# CPUæ¸©åº¦ã‚’å–å¾—ã™ã‚‹WindowsPowerShellã‚¹ã‚¯ãƒªãƒ—ãƒˆ
 $wmi = Get-WmiObject MSAcpi_ThermalZoneTemperature -Namespace "root/wmi"
 
 if ($wmi) {
     foreach ($item in $wmi) {
         $tempKelvin = $item.CurrentTemperature
         $tempCelsius = ($tempKelvin / 10) - 273.15
-        Write-Output ("CPU‰·“x: {0:N2} ‹C" -f $tempCelsius)
+        Write-Output ("CPUæ¸©åº¦: {0:N2} Â°C" -f $tempCelsius)
     }
 } else {
-    Write-Output "‰·“xî•ñ‚ğæ“¾‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+    Write-Output "æ¸©åº¦æƒ…å ±ã‚’å–å¾—ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
 }
-
 
 Read-Host -Prompt "Press Enter to exit"
