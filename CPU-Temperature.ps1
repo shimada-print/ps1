@@ -1,4 +1,6 @@
 # CPU温度を取得するWindowsPowerShellスクリプト
+# 管理者権限でWindowsPowerShellを起動しないと拒否される
+
 $wmi = Get-WmiObject MSAcpi_ThermalZoneTemperature -Namespace "root/wmi"
 
 if ($wmi) {
