@@ -1,17 +1,30 @@
-# CPUæ¸©åº¦ã‚’å–å¾—ã™ã‚‹WindowsPowerShellã‚¹ã‚¯ãƒªãƒ—ãƒˆ
-# ç®¡ç†è€…æ¨©é™ã§WindowsPowerShellã‚’èµ·å‹•ã—ãªã„ã¨æ‹’å¦ã•ã‚Œã‚‹
-
-$wmi = Get-WmiObject MSAcpi_ThermalZoneTemperature -Namespace "root/wmi"
-
-if ($wmi) {
-    foreach ($item in $wmi) {
-        $tempKelvin = $item.CurrentTemperature
-        $tempCelsius = ($tempKelvin / 10) - 273.15
-        Write-Output ("CPUæ¸©åº¦: {0:N2} Â°C" -f $tempCelsius)
-    }
-} else {
-    Write-Output "æ¸©åº¦æƒ…å ±ã‚’å–å¾—ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚"
+# ŠÇ—Ò‚Æ‚µ‚ÄÀs‚³‚ê‚Ä‚¢‚é‚©Šm”F
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)) {
+    # ŠÇ—ÒŒ ŒÀ‚ÅÄÀs
+    $script = $MyInvocation.MyCommand.Definition
+    Start-Process powershell.exe -ArgumentList "-NoExit", "-File `"$script`"" -Verb RunAs
+    # ƒXƒNƒŠƒvƒgI—¹
+    exit
 }
 
-# ä¸‹è¨˜ã‚’å…¥ã‚Œãªã„ã¨ç›´ãã«æ¶ˆãˆã¦è¦‹ã‚Œãªã„
+Write-Output "ŠÇ—ÒŒ ŒÀ‚ÅÀs’†‚Å‚·B"
+
+# CPU‰·“x‚ğ•\¦
+try {
+    $wmi = Get-WmiObject MSAcpi_ThermalZoneTemperature -Namespace "root/wmi"
+    if ($wmi) {
+        Write-Output "‰·“xƒf[ƒ^æ“¾¬Œ÷B"
+        foreach ($item in $wmi) {
+            $tempKelvin = $item.CurrentTemperature
+            $tempCelsius = ($tempKelvin / 10) - 273.15
+            Write-Output ("CPU‰·“x: {0:N2} ‹C" -f $tempCelsius)
+        }
+    } else {
+        Write-Output "‰·“xî•ñ‚ğæ“¾‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B"
+    }
+} catch {
+    Write-Output "ƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½: $_"
+}
+
+# ‰º‹L‚ğ“ü‚ê‚È‚¢‚Æ’¼‚®‚ÉÁ‚¦‚ÄŒ©‚ê‚È‚¢
 Read-Host -Prompt "Press Enter to exit"
