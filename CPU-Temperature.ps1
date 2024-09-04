@@ -13,4 +13,5 @@ if ($wmi) {
     Write-Output "温度情報を取得できませんでした。"
 }
 
+# 下記を入れないと直ぐに消えて見れない
 Read-Host -Prompt "Press Enter to exit"
