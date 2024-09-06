@@ -53,5 +53,5 @@ Write-Host "IPアドレス:"
 $ipAddresses | Format-Table -AutoSize
 
 
-# 下記を入れないと右クリックでPowerShellで起動した場合は、直ぐにターミナルが消えて見れない
+# 下記を入れないと右クリック後にPowerShellで起動した場合は、直ぐにターミナルが消えて見れない
 Read-Host -Prompt "Press Enter to exit"
