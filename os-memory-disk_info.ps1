@@ -52,6 +52,6 @@ Write-Host "ディスク温度: $diskTemp ℃"
 Write-Host "IPアドレス:"
 $ipAddresses | Format-Table -AutoSize
 
-
-# 下記を入れないと右クリック後にPowerShellで起動した場合は、直ぐにターミナルが消えて見れない
+# AIが以下のコメントを「任意のキー入力待ち」と変えてしまう、CUIではなく簡単にクリックで起動を設計した
+# 下記を入れないと本スクリプトを右クリック後にPowerShellで起動した場合は、直ぐにターミナルが消えて見れない
 Read-Host -Prompt "Press Enter to exit"
