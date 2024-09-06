@@ -1,57 +1,57 @@
-### OS‚Æƒƒ‚ƒŠ[‚Æ“à‘ ƒfƒBƒXƒN‚ÆIPƒAƒhƒŒƒX‚Ìî•ñ‚ğûW‚µƒtƒ@ƒCƒ‹o—Í‚·‚éPowerShellƒXƒNƒŠƒvƒg ###
-# 2024”N9Œ7“ú‚ÉAI‚ğg‚¢Šé‰æ‚Í„‚ªƒvƒƒ“ƒvƒg‚µAAI‚ªƒvƒƒOƒ‰ƒ~ƒ“ƒO‚Ì‚İ‚µA30•ª‚Ù‚Ç‚ÅŠ®¬
-# Win32‚È‚Ì‚ÅWindows‚Ì‚İ‚Å‰Â“®‚©H‚ÍAPowerShellCore‚Ìƒ}ƒ‹ƒ`OS‘Î‰‚©‚ç‚µ‚Ä•s–¾
-# Domain‚Í“Á‚ÉŒÂl—˜—p‚Ìê‡‚Íƒ[ƒNƒOƒ‹[ƒv‚Ìê‡‚à‚ ‚é
+### OSã¨ãƒ¡ãƒ¢ãƒªãƒ¼ã¨å†…è”µãƒ‡ã‚£ã‚¹ã‚¯ã¨IPã‚¢ãƒ‰ãƒ¬ã‚¹ã®æƒ…å ±ã‚’åé›†ã—ãƒ•ã‚¡ã‚¤ãƒ«å‡ºåŠ›ã™ã‚‹PowerShellã‚¹ã‚¯ãƒªãƒ—ãƒˆ ###
+# 2024å¹´9æœˆ7æ—¥ã«AIã‚’ä½¿ã„ä¼ç”»ã¯ç§ãŒãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã—ã€AIãŒãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°ã®ã¿ã—ã€30åˆ†ã»ã©ã§å®Œæˆ
+# Win32ãªã®ã§Windowsã®ã¿ã§å¯å‹•ã‹ï¼Ÿã¯ã€PowerShellCoreã®ãƒãƒ«ãƒOSå¯¾å¿œã‹ã‚‰ã—ã¦ä¸æ˜
+# Domainã¯ç‰¹ã«å€‹äººåˆ©ç”¨ã®å ´åˆã¯ãƒ¯ãƒ¼ã‚¯ã‚°ãƒ«ãƒ¼ãƒ—ã®å ´åˆã‚‚ã‚ã‚‹
 
 
-# ˆÈ‰º‚ªAI‚ªƒvƒƒOƒ‰ƒ~ƒ“ƒO
-# “ú‚ğæ“¾‚µ‚Äƒtƒ@ƒCƒ‹–¼‚ÉŠÜ‚ß‚é
+# ä»¥ä¸‹ãŒAIãŒãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°
+# æ—¥æ™‚ã‚’å–å¾—ã—ã¦ãƒ•ã‚¡ã‚¤ãƒ«åã«å«ã‚ã‚‹
 $dateTime = Get-Date -Format "yyyyMMdd_HHmmss"
 $fileName = "os-memory-disk_info_{0}.txt" -f $dateTime
 
-# ƒVƒXƒeƒ€î•ñAƒƒ‚ƒŠƒ`ƒbƒvî•ñA“à‘ ƒfƒBƒXƒNî•ñ‚ğæ“¾
+# ã‚·ã‚¹ãƒ†ãƒ æƒ…å ±ã€ãƒ¡ãƒ¢ãƒªãƒãƒƒãƒ—æƒ…å ±ã€å†…è”µãƒ‡ã‚£ã‚¹ã‚¯æƒ…å ±ã‚’å–å¾—
 $systemInfo = systeminfo
 $memoryInfo = wmic memorychip get /value
 $diskInfo = wmic diskdrive get /value
 
-# CPU‰·“x‚ğæ“¾ (WMI‚ğg—p)
+# CPUæ¸©åº¦ã‚’å–å¾— (WMIã‚’ä½¿ç”¨)
 $cpuTemp = (Get-WmiObject Win32_TemperatureSensor -Filter "SensorType='CPU'").Temperature 2> $null
 
-# ƒƒ‚ƒŠ‰·“x‚ğæ“¾ (WMI‚ğg—pA‚½‚¾‚µ‘½‚­‚Ìê‡A’¼Ú“I‚Èƒƒ‚ƒŠ‰·“x‚Íæ“¾‚Å‚«‚È‚¢)
+# ãƒ¡ãƒ¢ãƒªæ¸©åº¦ã‚’å–å¾— (WMIã‚’ä½¿ç”¨ã€ãŸã ã—å¤šãã®å ´åˆã€ç›´æ¥çš„ãªãƒ¡ãƒ¢ãƒªæ¸©åº¦ã¯å–å¾—ã§ããªã„)
 $memoryTemp = (Get-WmiObject Win32_TemperatureSensor -Filter "SensorType='Memory'").Temperature 2> $null
 
-# ƒfƒBƒXƒN‰·“x‚ğæ“¾ (WMI‚ğg—p)
+# ãƒ‡ã‚£ã‚¹ã‚¯æ¸©åº¦ã‚’å–å¾— (WMIã‚’ä½¿ç”¨)
 $diskTemp = (Get-WmiObject Win32_PhysicalMedia).Temperature 2> $null
 
-# IPƒAƒhƒŒƒX‚ğæ“¾
+# IPã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å–å¾—
 $ipAddresses = Get-NetIPAddress | Select-Object IPAddress
 
-# æ“¾‚µ‚½î•ñ‚ğ•¶š—ñ‚ÉŒ‹‡
+# å–å¾—ã—ãŸæƒ…å ±ã‚’æ–‡å­—åˆ—ã«çµåˆ
 $allInfo = $systemInfo + "`n" + $memoryInfo + "`n" + $diskInfo + "`n"
-$allInfo += "CPU Temperature: $cpuTemp "
-$allInfo += "`nMemory Temperature: $memoryTemp "
-$allInfo += "`nDisk Temperature: $diskTemp "
+$allInfo += "CPU Temperature: $cpuTemp â„ƒ"
+$allInfo += "`nMemory Temperature: $memoryTemp â„ƒ"
+$allInfo += "`nDisk Temperature: $diskTemp â„ƒ"
 $allInfo += "`nIP Addresses:"
 foreach ($ipAddress in $ipAddresses) {
     $allInfo += "`n  - $ipAddress.IPAddress"
 }
 
-# Œ‹‰Ê‚ğƒtƒ@ƒCƒ‹‚Éo—ÍiUTF-8‚ÅƒGƒ“ƒR[ƒhj
+# çµæœã‚’ãƒ•ã‚¡ã‚¤ãƒ«ã«å‡ºåŠ›ï¼ˆUTF-8ã§ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰ï¼‰
 Out-File -FilePath $fileName -Encoding utf8 -InputObject $allInfo
 
-# Œ‹‰Ê‚ğ•\¦iˆê“I‚É•\¦‚·‚éê‡‚ÍƒRƒƒ“ƒgƒAƒEƒg‚ğŠO‚·j
-Write-Host "ƒVƒXƒeƒ€î•ñ"
+# çµæœã‚’è¡¨ç¤ºï¼ˆä¸€æ™‚çš„ã«è¡¨ç¤ºã™ã‚‹å ´åˆã¯ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã‚’å¤–ã™ï¼‰
+Write-Host "ã‚·ã‚¹ãƒ†ãƒ æƒ…å ±"
 $systemInfo
-Write-Host "ƒƒ‚ƒŠƒ`ƒbƒvî•ñ"
+Write-Host "ãƒ¡ãƒ¢ãƒªãƒãƒƒãƒ—æƒ…å ±"
 $memoryInfo
-Write-Host "“à‘ ƒfƒBƒXƒNî•ñ"
+Write-Host "å†…è”µãƒ‡ã‚£ã‚¹ã‚¯æƒ…å ±"
 $diskInfo
-Write-Host "CPU‰·“x: $cpuTemp "
-Write-Host "ƒƒ‚ƒŠ‰·“x: $memoryTemp "
-Write-Host "ƒfƒBƒXƒN‰·“x: $diskTemp "
-Write-Host "IPƒAƒhƒŒƒX:"
+Write-Host "CPUæ¸©åº¦: $cpuTemp â„ƒ"
+Write-Host "ãƒ¡ãƒ¢ãƒªæ¸©åº¦: $memoryTemp â„ƒ"
+Write-Host "ãƒ‡ã‚£ã‚¹ã‚¯æ¸©åº¦: $diskTemp â„ƒ"
+Write-Host "IPã‚¢ãƒ‰ãƒ¬ã‚¹:"
 $ipAddresses | Format-Table -AutoSize
 
 
-# ‰º‹L‚ğ“ü‚ê‚È‚¢‚ÆƒNƒŠƒbƒN‚Å‹N“®‚µ‚½ê‡‚Í’¼‚®‚ÉÁ‚¦‚ÄŒ©‚ê‚È‚¢
+# ä¸‹è¨˜ã‚’å…¥ã‚Œãªã„ã¨ã‚¯ãƒªãƒƒã‚¯ã§èµ·å‹•ã—ãŸå ´åˆã¯ç›´ãã«ã‚¿ãƒ¼ãƒŸãƒŠãƒ«ãŒæ¶ˆãˆã¦è¦‹ã‚Œãªã„
 Read-Host -Prompt "Press Enter to exit"
