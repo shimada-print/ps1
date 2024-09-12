@@ -32,5 +32,5 @@ Out-File -FilePath $fileName -InputObject $dockerNodeLs -Append
 # ファイルが作成されたことをターミナルで通知
 Write-Host "Docker情報が以下のファイルに保存されました:" $fileName
 
-# 下記を入れないと直ぐにターミナルが消えて見れない
+# 下記を入れないとターミナルが直ぐに消えて見れない
 Read-Host -Prompt "Press Enter to exit"
