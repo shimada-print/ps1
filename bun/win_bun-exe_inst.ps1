@@ -13,3 +13,6 @@ if ($bunVersion -ne "latest") {
 
 # インストール実行
 Invoke-Expression $installCommand
+
+# 下記を入れないとターミナルが直ぐに消えて見れない
+Read-Host -Prompt "Press Enter to exit"
