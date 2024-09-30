@@ -10,6 +10,7 @@ $args = "-n --goto 'workbench.action.showCommands' --force"
 # VSCodeを起動
 Start-Process $vscodePath -ArgumentList $args
 
+# ヘルプをパワーシェルなどのターミナルで表示
 code --help
 
 # 下記を入れないとクリック起動をするとターミナルが直ぐに消えて見れない
